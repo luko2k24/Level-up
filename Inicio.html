@@ -1,0 +1,74 @@
+<!-- Comenzamos con index.html -->
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEVEL-UP GAMER</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark text-white">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-primary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="Inicio.html">LEVEL-UP GAMER</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="Inicio.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+          <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito 🛒</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="container text-center mt-5">
+    <h2 class="mb-4">¡Bienvenido a nuestra tienda gamer!</h2>
+    <img src="Imagenes/Level-up.png" alt="Imagen gamer" class="img-fluid rounded my-4" style="max-width: 400px;">
+    <p>Explora consolas, periféricos y más para mejorar tu experiencia de juego.</p>
+
+    <!-- Noticias -->
+    <section class="mt-5">
+      <h3>Noticias Importantes</h3>
+      <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+        <div class="col">
+          <div class="card">
+            <img src="Imagenes/640px-Silksong_cover.png" width="100" height="300"class="card-img-top" alt="Noticia 1">
+            <div class="card-body">
+              <h5 class="card-title">Silk Song</h5>
+              <p class="card-text">Silk Song rompe la plataforma de Steam con casi 600 mil usuarios disponibles </p>
+              <a href="https://www.infobae.com/malditos-nerds/2025/09/09/hollow-knight-silksong-rompe-records-de-jugadores-en-steam-con-casi-600-mil-usuarios-simultaneos/" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="Imagenes/Valo.png" width="100" height="300"class="card-img-top" alt="Noticia 2">
+            <div class="card-body">
+              <h5 class="card-title">VALORANT CHAMPIONS 2026</h5>
+              <p class="card-text">¡El Champions 2026 va a Shanghái!</p>
+              <a href="" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3 mt-5 w-100">
+    <p class="mb-0">&copy; 2025 LEVEL-UP GAMER</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

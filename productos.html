@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productos - LEVEL-UP GAMER</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-dark text-white">
+  <!-- Header -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="Inicio.html">LEVEL-UP GAMER</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="Inicio.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+          <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito 🛒</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Título + Filtro -->
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Todos los Productos</h2>
+
+    <!-- Filtro por categoría -->
+    <section class="mb-4">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+          <label for="filtroCategoria" class="form-label">Filtrar por categoría</label>
+          <select id="filtroCategoria" class="form-select">
+            <option value="Todos">Todos</option>
+            <option value="Juegos de Mesa">Juegos de Mesa</option>
+            <option value="Accesorios">Accesorios</option>
+            <option value="Consolas">Consolas</option>
+            <option value="Computadores Gamers">Computadores Gamers</option>
+            <option value="Sillas Gamers">Sillas Gamers</option>
+            <option value="Mouse">Mouse</option>
+            <option value="Mousepad">Mousepad</option>
+            <option value="Poleras Personalizadas">Poleras Personalizadas</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid de productos -->
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="gridProductos">
+      
+      <!-- CATEGORÍA: Juegos de Mesa -->
+      <div class="col producto" data-category="Juegos de Mesa">
+        <div class="card h-100">
+          <img src="Imagenes/catan.png" class="card-img-top" alt="Catan">
+          <div class="card-body">
+            <h5 class="card-title">Catan</h5>
+            <p class="card-text text-muted">Juegos de Mesa</p>
+            <p class="card-text">Un clásico juego de estrategia donde los jugadores compiten por colonizar y expandirse en la isla de Catan. Ideal para 3-4 jugadores y perfecto para noches de juego en familia o con amigos.</p>
+            <p class="card-text precio">$29.990 CLP</p>
+            <button class="btn btn-primary btn-add"
+              data-nombre="Catan" data-categoria="Juegos de Mesa" data-precio="29990">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col producto" data-category="Juegos de Mesa">
+        <div class="card h-100">
+          <img src="Imagenes/carcassonne.png" class="card-img-top" alt="Carcassonne">
+          <div class="card-body">
+            <h5 class="card-title">Carcassonne</h5>
+            <p class="card-text text-muted">Juegos de Mesa</p>
+            <p class="card-text">Un juego de colocación de fichas donde los jugadores construyen el paisaje alrededor de la fortaleza medieval de Carcassonne. Ideal para 2-5 jugadores y fácil de aprender.</p>
+            <p class="card-text precio">$24.990 CLP</p>
+            <button class="btn btn-primary btn-add"
+              data-nombre="Carcassonne" data-categoria="Juegos de Mesa" data-precio="24990">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA: Accesorios -->
+      <div class="col producto" data-category="Accesorios">
+        <div class="card h-100">
+          <img src="Imagenes/mando.png" class="card-img-top" alt="Controlador Xbox">
+          <div class="card-body">
+            <h5 class="card-title">Controlador Inalámbrico Xbox Series X</h5>
+            <p class="card-text text-muted">Accesorios</p>
+            <p class="card-text">Ofrece una experiencia de juego cómoda con botones mapeables y una respuesta táctil mejorada. Compatible con consolas Xbox y PC.</p>
+            <p class="card-text precio">$59.990 CLP</p>
+            <button class="btn btn-primary btn-add"
+              data-nombre="Controlador Xbox Series X" data-categoria="Accesorios" data-precio="59990">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col producto" data-category="Accesorios">
+        <div class="card h-100">
+          <img src="Imagenes/Auriculares HyperX Cloud II.png" class="card-img-top" alt="Auriculares HyperX">
+          <div class="card-body">
+            <h5 class="card-title">Auriculares Gamer HyperX Cloud II</h5>
+            <p class="card-text text-muted">Accesorios</p>
+            <p class="card-text">Proporcionan un sonido envolvente de calidad con un micrófono desmontable y almohadillas de espuma viscoelástica para mayor comodidad durante largas sesiones de juego.</p>
+            <p class="card-text precio">$79.990 CLP</p>
+            <button class="btn btn-primary btn-add"
+              data-nombre="Auriculares HyperX Cloud II" data-categoria="Accesorios" data-precio="79990">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA: Consolas -->
+      <div class="col producto" data-category="Consolas">
+        <div class="card h-100">
+          <img src="Imagenes/Play.png" class="card-img-top" alt="PlayStation 5">
+          <div class="card-body">
+            <h5 class="card-title">PlayStation 5</h5>
+            <p class="card-text text-muted">Consolas</p>
+            <p class="card-text">La consola de última generación de Sony, que ofrece gráficos impresionantes y tiempos de carga ultrarrápidos para una experiencia de juego inmersiva.</p>
+            <p class="card-text precio">$549.990 CLP</p>
+            <button class="btn btn-primary btn-add"
+              data-nombre="PlayStation 5" data-categoria="Consolas" data-precio="549990">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA: Computadores Gamers -->
+      <div class="col producto" data-category="Computadores Gamers">
+        <div class="card h-100">
+          <img src="Imagenes/ROX.png" class="card-img-top" alt="PC ASUS ROG">
+          <div class="card-body">
+            <h5 class="card-title">PC Gamer ASUS ROG Strix</h5>
+            <p class="card-text text-muted">Computadores Gamers</p>
+            <p class="card-text">Un potente equipo diseñado para los gamers más exigentes, equipado con los últimos componentes para ofrecer un rendimiento excepcional en cualquier juego.</p>
+            <p class="card-text precio">$1.299.990 CLP</p>
+            <button class="btn btn-primary btn-add"
+              data-nombre="PC Gamer ASUS ROG Strix" data-categoria="Computadores Gamers" data-precio="1299990">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA: Sillas Gamers -->
+      <div class="col producto" data-category="Sillas Gamers">
+        <div class="card h-100">
+          <img src="Imagenes/Silla.png" class="card-img-top" alt="Silla Gamer">
+          <div class="card-body">
+            <h5 class="card-title">Silla Gamer Secretlab Titan</h5>
+            <p class="card-text text-muted">Sillas Gamers</p>
+            <p class="card-text">Diseñada para el máximo confort, esta silla ofrece un soporte ergonómico y personalización ajustable para sesiones de juego prolongadas.</p>
+            <p class="card-text precio">$349.990 CLP</p>
+            <button class="btn btn-primary btn-add"
+              data-nombre="Silla Gamer Secretlab Titan" data-categoria="Sillas Gamers" data-precio="349990">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA: Mouse -->
+      <div class="col producto" data-category="Mouse">
+        <div class="card h-100">
+          <img src="Imagenes/Mouse.png" class="card-img-top" alt="Mouse Logitech">
+          <div class="card-body">
+            <h5 class="card-title">Mouse Logitech G502 HERO</h5>
+            <p class="card-text text-muted">Mouse</p>
+            <p class="card-text">Con sensor de alta precisión y botones personalizables, este mouse es ideal para gamers que buscan un control preciso y personalización.</p>
+            <p class="card-text precio">$49.990 CLP</p>
+            <button class="btn btn-primary btn-add"
+              data-nombre="Mouse Logitech G502 HERO" data-categoria="Mouse" data-precio="49990">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA: Mousepad -->
+      <div class="col producto" data-category="Mousepad">
+        <div class="card h-100">
+          <img src="Imagenes/Pad.png" class="card-img-top" alt="Mousepad Razer">
+          <div class="card-body">
+            <h5 class="card-title">Mousepad Razer Goliathus Extended</h5>
+            <p class="card-text text-muted">Mousepad</p>
+            <p class="card-text">Ofrece un área de juego amplia con iluminación RGB personalizable, asegurando una superficie suave y uniforme para el movimiento del mouse.</p>
+            <p class="card-text precio">$29.990 CLP</p>
+            <button class="btn btn-primary btn-add"
+              data-nombre="Mousepad Razer Goliathus Extended" data-categoria="Mousepad" data-precio="29990">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA: Poleras Personalizadas -->
+      <div class="col producto" data-category="Poleras Personalizadas">
+        <div class="card h-100">
+          <img src="Imagenes/Camiseta.png" class="card-img-top" alt="Polera Gamer">
+          <div class="card-body">
+            <h5 class="card-title">Polera Gamer Personalizada 'Level-Up'</h5>
+            <p class="card-text text-muted">Poleras Personalizadas</p>
+            <p class="card-text">Una camiseta cómoda y estilizada, con la posibilidad de personalizarla con tu gamer tag o diseño favorito.</p>
+            <p class="card-text precio">$14.990 CLP</p>
+            <button class="btn btn-primary btn-add"
+              data-nombre="Polera Gamer Personalizada 'Level-Up'" data-categoria="Poleras Personalizadas" data-precio="14990">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3 mt-5 w-100">
+    <p class="mb-0">&copy; 2025 LEVEL-UP GAMER</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS: Agregar al carrito + filtro por categoría -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Filtro por categoría
+      const filtro = document.getElementById("filtroCategoria");
+      const tarjetas = document.querySelectorAll(".producto");
+
+      filtro.addEventListener("change", function () {
+        const valor = this.value;
+        tarjetas.forEach(card => {
+          const cat = card.dataset.category;
+          card.style.display = (valor === "Todos" || cat === valor) ? "" : "none";
+        });
+      });
+
+      // Agregar al carrito
+      const botones = document.querySelectorAll(".btn-add");
+      botones.forEach(btn => {
+        btn.addEventListener("click", function () {
+          const nombre = btn.dataset.nombre;
+          const categoria = btn.dataset.categoria;
+          const precio = Number(btn.dataset.precio);
+          let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+          const idx = carrito.findIndex(p => p.nombre === nombre);
+          if (idx >= 0) {
+            carrito[idx].cantidad += 1;
+          } else {
+            carrito.push({ nombre, categoria, precio, cantidad: 1 });
+          }
+          localStorage.setItem("carrito", JSON.stringify(carrito));
+          alert(`${nombre} agregado al carrito`);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

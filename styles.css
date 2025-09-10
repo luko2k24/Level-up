@@ -1,0 +1,199 @@
+
+body {
+  background-color: #121212; /* Fondo negro más suave */
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, .navbar-brand {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1E1E1E; /* Fondo oscuro para navbar */
+  border-bottom: 1px solid #39FF14; /* Línea verde neón */
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 600;
+}
+.nav-link:hover {
+  color: #39FF14 !important; /* Verde neón al hover */
+}
+.navbar .nav-link.active {
+  color: #39FF14 !important;
+}
+
+/* Contador carrito */
+#cart-count {
+  font-weight: 700;
+  vertical-align: text-top;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #1E90FF; /* Azul neón */
+  border-color: #1E90FF;
+  font-weight: 700;
+  border-radius: 30px; /* Bordes redondeados */
+  padding: 10px 20px;
+  box-shadow: 0px 4px 10px rgba(30, 144, 255, 0.3); /* Sombra suave */
+}
+
+.btn-primary:hover {
+  background-color: #39FF14;
+  border-color: #39FF14;
+  color: #000;
+}
+
+.btn-success {
+  background-color: #39FF14;
+  border-color: #39FF14;
+  color: #000;
+  font-weight: 700;
+  border-radius: 30px; /* Bordes redondeados */
+  padding: 10px 20px;
+  box-shadow: 0px 4px 10px rgba(57, 255, 20, 0.3); /* Sombra suave */
+}
+.btn-success:hover {
+  background-color: #2dd10f;
+  border-color: #2dd10f;
+  color: #000;
+}
+
+/* Tarjetas (cards) de productos/noticias */
+.card {
+  background-color: #1E1E1E;  /* Fondo más suave para las tarjetas */
+  color: #fff;
+  border: 1px solid #1E90FF;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0px 6px 20px rgba(30, 144, 255, 0.3); /* Sombra suave para resaltar las tarjetas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación para hover */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Efecto de hover para que se levante */
+  box-shadow: 0px 10px 30px rgba(30, 144, 255, 0.5); /* Sombra más intensa al hacer hover */
+}
+
+.card-title {
+  color: #39FF14;
+  font-weight: 700;
+}
+
+.card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.05); /* Efecto hover para las imágenes */
+}
+
+.card .precio {
+  margin: 0 0 .5rem 0;
+  font-weight: 600;
+}
+
+/* Filtro de categoría */
+#filtroCategoria {
+  background: #1e1e1e;
+  color: #fff;
+  border-color: #1E90FF;
+}
+#filtroCategoria:focus {
+  border-color: #39FF14;
+  box-shadow: 0 0 0 .2rem rgba(57,255,20,.15);
+}
+
+/* Tabla del carrito */
+.table thead {
+  background-color: #1E90FF;
+  color: #fff;
+}
+.table tbody tr td {
+  vertical-align: middle;
+  background: #121212;
+  color: #eee;
+  border-color: #1E90FF22;
+}
+input[type="number"] {
+  max-width: 70px;
+  text-align: center;
+  background: #1e1e1e;
+  color: #fff;
+  border-color: #1E90FF;
+}
+input[type="number"]:focus {
+  border-color: #39FF14;
+  box-shadow: 0 0 0 .2rem rgba(57,255,20,.15);
+  background: #1b1b1b;
+}
+
+/* Footer (fuera de container para ocupar todo el ancho) */
+footer {
+  background-color: #1E90FF;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: 40px;
+}
+
+/* Imagen de portada (Inicio) */
+.img-hero {
+  max-width: 420px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(30, 144, 255, 0.3); /* Sombra para la imagen */
+}
+
+/* ============ Registro (caja centrada) ============ */
+.registro-wrap {
+  min-height: calc(100vh - 64px - 64px); /* altura aprox. resta navbar y footer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+.registro-card {
+  width: 100%;
+  max-width: 520px;
+  background: #080000;               /* negro profundo */
+  border: 1px solid #1E90FF;         /* azul neón */
+  border-radius: .75rem;
+  box-shadow: 0 0 20px rgba(30,144,255,.18);
+}
+.registro-card .card-header {
+  background: transparent;
+  border-bottom: 1px solid rgba(30,144,255,.35);
+}
+.form-text {
+  color: #fff; /* Blanco, puedes cambiar por otro color claro si prefieres */
+}
+.registro-card h2 {
+  margin: 0;
+}
+
+/* Inputs y selects del registro */
+.form-control, .form-select {
+  background: #1e1e1e;
+  color: #fff;
+  border-color: #1E90FF;
+}
+.form-control::placeholder {
+  color: #a7a7a7;
+}
+.form-control:focus, .form-select:focus {
+  border-color: #39FF14;
+  box-shadow: 0 0 0 .2rem rgba(57,255,20,.15);
+  background: #1b1b1b;
+  color: #fff;
+}
+
+

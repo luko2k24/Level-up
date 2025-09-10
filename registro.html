@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Registro - LEVEL-UP GAMER</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-primary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="Inicio.html">LEVEL-UP GAMER</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="Inicio.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+          <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito 🛒</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <style>
+ /* Texto extra del registro (descuento Duoc) */
+.nota-duoc {
+  font-size: .9rem;
+  color: #8fdc95;
+}
+ body {
+      background-color: #121212;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 500px;
+      margin-top: 50px;
+    }
+
+    .card-header {
+      background-color: transparent;
+      border-bottom: 1px solid #1E90FF;
+    }
+
+    .card-body {
+      padding: 2rem;
+    }
+
+    .btn-primary {
+      background-color: #1E90FF;
+      border-color: #1E90FF;
+      font-weight: bold;
+    }
+
+    .btn-primary:hover {
+      background-color: #39FF14;
+      border-color: #39FF14;
+      color: #000;
+    }
+
+    /* Para los formularios en la misma página */
+    .toggle-btn {
+      font-size: 1rem;
+      color: #1E90FF;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    /* Ocultar un formulario mientras el otro está visible */
+    .form-container {
+      display: none;
+    }
+
+    .form-container.active {
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-dark text-white">
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header text-center">
+        <h2 id="formTitle">Iniciar Sesión</h2>
+      </div>
+      <div class="card-body">
+        <!-- Formulario de Login -->
+        <div id="loginForm" class="form-container active">
+          <form onsubmit="return validarLogin()">
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="loginEmail" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="loginPassword" required>
+               <div class="form-text">Si tu correo termina en @duocuc.cl obtienes 20% de descuento de por vida</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+          </form>
+          <p class="text-center mt-3">¿No tienes cuenta? <button class="toggle-btn" onclick="toggleForms()">Regístrate</button></p>
+        </div>
+
+        <!-- Formulario de Registro -->
+        <div id="registerForm" class="form-container">
+          <form onsubmit="return validarFormulario()">
+            <div class="mb-3">
+              <label for="registerNombre" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="registerNombre" required>
+             
+            </div>
+
+            <div class="mb-3">
+              <label for="registerEdad" class="form-label">Edad</label>
+              <input type="number" class="form-control" id="registerEdad" min="18" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="registerCorreo" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="registerCorreo" required>
+              <div class="form-text">.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="registerPassword" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="registerPassword" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="registerConfirmar" class="form-label">Confirmar contraseña</label>
+              <input type="password" class="form-control" id="registerConfirmar" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="registerRegion" class="form-label">Región</label>
+              <select class="form-select" id="registerRegion" required>
+                <option value="">Selecciona una región</option>
+                <option value="metropolitana">Región Metropolitana</option>
+                <option value="valparaiso">Valparaíso</option>
+                <option value="biobio">Biobío</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="registerComuna" class="form-label">Comuna</label>
+              <input type="text" class="form-control" id="registerComuna" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+          </form>
+          <p class="text-center mt-3">¿Ya tienes cuenta? <button class="toggle-btn" onclick="toggleForms()">Inicia sesión</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3 mt-5 w-100">
+    <p class="mb-0">&copy; 2025 LEVEL-UP GAMER</p>
+  </footer>
+
+  <script>
+    // Función para alternar entre los formularios de login y registro
+    function toggleForms() {
+      const loginForm = document.getElementById("loginForm");
+      const registerForm = document.getElementById("registerForm");
+      const formTitle = document.getElementById("formTitle");
+
+      loginForm.classList.toggle("active");
+      registerForm.classList.toggle("active");
+
+      // Cambiar el título según el formulario visible
+      if (loginForm.classList.contains("active")) {
+        formTitle.textContent = "Iniciar Sesión";
+      } else {
+        formTitle.textContent = "Registro";
+      }
+    }
+
+    // Validación del formulario de login
+    function validarLogin() {
+      const email = document.getElementById("loginEmail").value.trim();
+      const password = document.getElementById("loginPassword").value.trim();
+
+      if (email === "" || password === "") {
+        alert("Por favor, ingresa todos los campos.");
+        return false;
+      }
+
+      // Aquí puedes agregar lógica para verificar el login, por ejemplo, si el correo está registrado en tu sistema.
+
+      alert("¡Bienvenido de nuevo!");
+      return true;
+    }
+
+    // Validación del formulario de registro
+    function validarFormulario() {
+      const edad = parseInt(document.getElementById('registerEdad').value, 10);
+      const pass = document.getElementById('registerPassword').value.trim();
+      const confirmar = document.getElementById('registerConfirmar').value.trim();
+      const correo = document.getElementById('registerCorreo').value.trim();
+
+      if (isNaN(edad) || edad < 18) {
+        alert("Debes ser mayor de 18 años para registrarte.");
+        return false;
+      }
+      if (pass.length < 6) {
+        alert("La contraseña debe tener al menos 6 caracteres.");
+        return false;
+      }
+      if (pass !== confirmar) {
+        alert("Las contraseñas no coinciden.");
+        return false;
+      }
+
+      // Verifica si el correo es de Duoc UC y guarda el estado en localStorage
+      if (correo.endsWith("@duocuc.cl")) {
+        alert("¡Recibirás un 20% de descuento por ser de Duoc UC!");
+        // Guarda el flag de descuento en localStorage
+        localStorage.setItem("descuentoDuoc", "true");
+      }
+
+      alert("¡Registro exitoso!");
+      return true;
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
